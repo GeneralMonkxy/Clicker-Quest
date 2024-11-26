@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Quest</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 320px; /* Prevents screen crowding on smaller devices */
+      box-sizing: border-box;
+    }
+    #clickButton {
+      padding: 15px;
+      font-size: 20px;
+      background-color: #ffd700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    #goldCount {
+      font-size: 24px;
+      margin: 10px 0;
+      color: #333;
+    }
+    #upgradeButton {
+      padding: 12px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Click Quest</h2>
+    <button id="clickButton">Click for Gold</button>
+    <div id="goldCount">Gold: 0</div>
+    <button id="upgradeButton">Upgrade (10 Gold)</button>
+  </div>
+
+  <script>
+    let gold = 0;
+    let goldPerClick = 1;
+    let upgradeCost = 10;
+
+    // Get elements
+    const goldCountDisplay = document.getElementById('goldCount');
+    const clickButton = document.getElementById('clickButton');
+    const upgradeButton = document.getElementById('upgradeButton');
+
+    // Update the displayed gold
+    function updateGoldDisplay() {
+      goldCountDisplay.textContent = `Gold: ${gold}`;
+      upgradeButton.textContent = `Upgrade (${upgradeCost} Gold)`;
+      if (gold >= upgradeCost) {
+        upgradeButton.disabled = false;
+      } else {
+        upgradeButton.disabled = true;
+      }
+    }
+
+    // Handle click button
+    clickButton.addEventListener('click', function() {
+      gold += goldPerClick;
+      updateGoldDisplay();
+    });
+
+    // Handle upgrade button
+    upgradeButton.addEventListener('click', function() {
+      if (gold >= upgradeCost) {
+        gold -= upgradeCost;
+        goldPerClick += 1;
+        upgradeCost = Math.floor(upgradeCost * 1.5); // Increase cost for next upgrade
+        updateGoldDisplay();
+      }
+    });
+
+    // Initialize display
+    updateGoldDisplay();
+  </script>
+
+</body>
+</html>
