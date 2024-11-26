@@ -1,0 +1,80 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Container Styling */
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px;  /* Keeps it mobile-friendly */
+  box-sizing: border-box;
+}
+
+/* Heading Styling */
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+button {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+/* Click Button Styling */
+#clickButton {
+  background-color: #ffd700;
+}
+
+#clickButton:hover {
+  background-color: #f8c800;
+}
+
+/* Gold Display Styling */
+#goldCount {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Upgrade Button Styling */
+#upgradeButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#upgradeButton:hover {
+  background-color: #45a049;
+}
+
+/* Disabled Button Styling */
+button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
