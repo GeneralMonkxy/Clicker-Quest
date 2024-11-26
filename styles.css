@@ -24,12 +24,12 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 320px;  /* Keeps it mobile-friendly */
+  max-width: 320px;
   box-sizing: border-box;
 }
 
 /* Heading Styling */
-h2 {
+h2, h3, h4 {
   color: #333;
   font-size: 24px;
   margin-bottom: 15px;
@@ -56,25 +56,18 @@ button {
   background-color: #f8c800;
 }
 
-/* Gold Display Styling */
-#goldCount {
-  font-size: 22px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
 /* Upgrade Button Styling */
-#upgradeButton {
+button:hover {
   background-color: #4CAF50;
   color: white;
-}
-
-#upgradeButton:hover {
-  background-color: #45a049;
 }
 
 /* Disabled Button Styling */
 button:disabled {
   background-color: #e0e0e0;
   cursor: not-allowed;
+}
+
+#workerStatus p {
+  font-size: 18px;
 }
