@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Click Quest</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Linking the CSS file -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -12,10 +12,21 @@
     <h2>Click Quest</h2>
     <button id="clickButton">Click for Gold</button>
     <div id="goldCount">Gold: 0</div>
-    <button id="upgradeButton">Upgrade (10 Gold)</button>
+
+    <div id="upgrades">
+      <h3>Upgrades</h3>
+      <button id="clickUpgradeButton">Upgrade Click (+1 Gold per Click) - Cost: 10 Gold</button>
+      <button id="workerButton">Hire Worker (+1 Gold per second) - Cost: 50 Gold</button>
+    </div>
+    
+    <div id="workerStatus">
+      <h4>Worker Status</h4>
+      <p>Gold per second: <span id="goldPerSecond">0</span></p>
+    </div>
   </div>
 
-  <script src="script.js"></script> <!-- Linking the JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>
+
 
